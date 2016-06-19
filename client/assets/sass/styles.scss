@@ -1,0 +1,12 @@
+// Material Design colors
+@import 'bower_components/sass-material-colors/sass/sass-material-colors';
+@import 'bower_components/sass-material-colors/sass/sass-material-colors-classes';
+
+// Andy Util Sass Lib
+@import "bower_components/Andy/andy";
+
+// My Colors palette
+@import 'colors';
+
+// Admin Dashboard styles
+@import "admin-dashboard";

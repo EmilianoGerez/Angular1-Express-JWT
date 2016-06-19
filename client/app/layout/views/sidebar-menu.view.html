@@ -1,0 +1,15 @@
+<div id="sidebar-wrapper" ng-controller="SidebarCtrl as sidebarCtrl">
+    <div class="sidebar-header">
+        <a href="#" class="fa-stack fa-lg pull-left toggle-button" ng-click="shellCtrl.toggle()">
+            <i class="fa fa-bars fa-stack-1x" aria-hidden="true"></i>
+            <i class="fa fa-chevron-left fa-stack-1x" aria-hidden="true"></i>
+        </a>
+        <h4>Brand</h4>
+    </div>
+    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li ng-repeat="item in sidebarCtrl.menuItems | orderBy:'order'" ng-class="{active: sidebarCtrl.isActive(item.route)}">
+            <a href="{{item.route}}"><span class="fa-stack fa-lg pull-left"><i class="fa {{item.faClass}} fa-stack-1x "></i></span>
+                {{item.name}}</a>
+        </li>
+    </ul>
+</div>

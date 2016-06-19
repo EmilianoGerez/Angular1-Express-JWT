@@ -1,0 +1,12 @@
+<div ng-controller="ShellCtrl as shellCtrl">
+    <div ui-view='public'></div>
+    <div id="db-wrapper" ng-class="{toggled: shellCtrl.isToggled}" ng-if="shellCtrl.isLoggedIn">
+        <!-- Sidebar -->
+        <div ng-include="'client/app/layout/views/sidebar-menu.view.html'"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page wrapper -->
+        <div ng-include="'client/app/layout/views/content-wrapper.view.html'"></div>
+        <!-- /#page-content-wrapper -->
+    </div>
+</div>
