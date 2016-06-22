@@ -8,8 +8,8 @@
     function routeConfig($stateProvider) {
 
         $stateProvider
-            .state('signup', {
-                url: '/signup',
+            .state('login', {
+                url: '/login',
                 views: {
                     'public': {
                         templateUrl: 'client/app/auth/views/signup.view.html',

@@ -18,6 +18,19 @@
                 data: {
                     requiresLogin: false
                 }
+            })
+            .state('signup', {
+                url: '/signup',
+                views: {
+                    'public': {
+                        templateUrl: 'client/app/users/views/signup.view.html',
+                        controller: 'UsersSignupCtrl',
+                        controllerAs: 'vm'
+                    }
+                },
+                data: {
+                    requiresLogin: false
+                }
             });
     }
 

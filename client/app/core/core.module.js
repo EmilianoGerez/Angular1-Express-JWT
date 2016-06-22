@@ -5,6 +5,8 @@
         .module('app.core', [
             'ui.router',
             'formly',
-            'formlyBootstrap'
+            'formlyBootstrap',
+            'ngLodash',
+            'ngMessages'
         ]);
 })();

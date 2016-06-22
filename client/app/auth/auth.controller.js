@@ -3,9 +3,9 @@
         .module('app.auth')
         .controller('AuthCtrl', AuthCtrl);
 
-    AuthCtrl.$inject = [];
+    AuthCtrl.$inject = ['ValidatorsService'];
 
-    function AuthCtrl() {
+    function AuthCtrl(ValidatorsService) {
         var vm = this;
         vm.newUser = {};
         vm.credential = {};
@@ -35,6 +35,14 @@
                 label: 'Email',
                 placeholder: 'Your Email',
                 required: true
+            },
+            validators: {
+                email: function($viewValue, $modelValue, scope) {
+                    var value = $modelValue || $viewValue;
+                    if (value) {
+                        return ValidatorsService.email(value);
+                    }
+                }
             }
         }];
     }
